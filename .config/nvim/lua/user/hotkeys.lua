@@ -36,7 +36,7 @@ keymap("n", "<S-h>", ":bprevious<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
-keymap("n", "<leader>ft", ":NvimTreeFindFile<cr>", opts)
+keymap("n", "<leader>fe", ":NvimTreeFindFile<cr>", opts)
 
 -- Hop Support
 keymap("n", "<leader>fw", ":HopWord<cr>", opts)
@@ -80,6 +80,7 @@ keymap("n", "<leader>gP", ":Git push -f --no-verify<cr>", opts)
 keymap("n", "<leader>gb", ":Git blame<cr>", opts)
 keymap("n", "<leader>gw", ":Gwrite<cr>", opts)
 keymap("n", "<leader>gc", ":Git combine<cr>", opts)
+keymap("n", "<leader>gu", ":Git upstream<cr>", opts)
 
 -- Repeat macro
 keymap("n", ",,", "@@", opts)

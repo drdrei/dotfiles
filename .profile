@@ -1,5 +1,6 @@
 alias so='source $HOME/.bashrc && echo "Sourcing profiles..."'
 alias nv='nvim'
+source ~/.nvm/nvm.sh
 
 # Display Configs
 alias disp='$HOME/.scripts/display-placer'
@@ -9,6 +10,9 @@ ng:off origin:(0,0) degree:0" "id:FEC19417-0608-C1DF-AE93-05FFA5168526 res:1792x
 or_depth:4 scaling:on origin:(1040,1080) degree:0" "id:AB86A851-16BC-41AD-CB00-34C406A5EE8A re
 s:1920x1080 hz:60 color_depth:8 scaling:off origin:(1920,0) degree:0"'
 
+alias yarn:test='yarn && yarn test:jest --no-prelint -u'
+alias yarn:test:i='yarn && DEBUG_PRINT_LIMIT=10000 yarn test:jest --no-prelint --watch -u -i'
+
 # Stitch all images together in current dir
 alias convert:all="convert -append *.png *.jpg *.pdf out.png"
 
@@ -16,6 +20,8 @@ alias convert:all="convert -append *.png *.jpg *.pdf out.png"
 setup-device() {
   kasa --host 192.168.0.1 wifi join $1
 }
+
+alias ssh:tunnel="ssh -N -D 9090 fftunnel"
 
 for FILE in ~/.config/zsh/*; do
     source $FILE

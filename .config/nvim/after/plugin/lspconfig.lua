@@ -10,7 +10,6 @@ vim.diagnostic.config({
 
 -- All the clients and their configs that we want to use
 local servers = {
-	tsserver = {},
 	lua_ls = {
 		Lua = {
 			diagnostics = {
@@ -57,6 +56,7 @@ local on_attach = function(client, bufnr)
 	-- vim.api.nvim_exec_autocmds("User", { pattern = "LspAttached" })
 
 	-- Document Formatting
+
 	if client.server_capabilities.documentFormattingProvider then
 		vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format()")
 	end

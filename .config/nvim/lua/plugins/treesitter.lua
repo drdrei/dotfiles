@@ -4,6 +4,7 @@ return {
 	cmd = { "TSUpdateSync" },
 	opts = {
 		sync_install = false,
+		auto_install = true,
 		ignore_install = { "" },
 		ensure_installed = {
 			"bash",
@@ -11,22 +12,18 @@ return {
 			"css",
 			"html",
 			"javascript",
+			"javascript",
 			"jsdoc",
 			"json",
 			"lua",
-			"tsx",
 			"prisma",
-			"typescript",
-			"javascript",
 			"tsx",
+			"tsx",
+			"typescript",
 			"yaml",
 		},
 		highlight = { enable = true },
 		indent = { enable = true },
-		context_commentstring = {
-			enable = true,
-			enable_autocmd = false,
-		},
 	},
 	config = function(_, opts)
 		local added = {}

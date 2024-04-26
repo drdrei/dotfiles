@@ -1,4 +1,7 @@
 return {
-  "windwp/nvim-autopairs",
-  config = true
+	"windwp/nvim-autopairs",
+	dependencies = {
+		"hrsh7th/nvim-cmp",
+	},
+	config = true,
 }

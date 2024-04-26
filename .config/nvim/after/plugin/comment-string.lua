@@ -9,7 +9,7 @@ if not comment_ok then
 end
 
 configs.setup({
-	context_commentstring = {
+	ts_context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
 	},
