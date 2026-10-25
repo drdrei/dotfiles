@@ -1,6 +1,0 @@
-{
-  "filename": {
-    "prefix": ["print"],
-    "body": "print($0)"
-  }
-}

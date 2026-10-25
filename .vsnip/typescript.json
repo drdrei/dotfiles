@@ -1,6 +1,0 @@
-{
-  "filename": {
-    "prefix": ["clg"],
-    "body": "console.log('Drei: $1', $0)"
-  }
-}
