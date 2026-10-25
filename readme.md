@@ -1,6 +1,6 @@
 # Dotfiles
 
-Personal configuration files and Pi agent setup.
+Personal configuration files and tools.
 
 ## Installation
 
@@ -29,7 +29,7 @@ Files will be checked out directly to `~`. Manage with `git dotfiles add`, `git 
 Automates the bare repo setup above:
 
 ```bash
-curl https://raw.githubusercontent.com/drdrei/dotfiles/main/scripts/pi-bootstrap.sh | bash
+curl https://raw.githubusercontent.com/drdrei/dotfiles/main/.config/scripts/pi-bootstrap.sh | bash
 ```
 
 ### Alternative: Standard Clone
@@ -49,6 +49,29 @@ Then manage files from `~/dotfiles/` or selectively symlink configs.
 
 ## Directory Structure
 
+### `.config/` — Application Configs
+
+| File | Description |
+|------|-------------|
+| `config/iterm2/iterm2-profile.json` | iTerm2 profile (colors, font, keybindings) |
+| `config/tmux/tmux.conf` | Tmux config (prefix C-Space, plugins, pane layout) |
+| `config/zsh/git.sh` | Zsh helpers and git dotfiles aliases |
+| `config/scripts/` | Bootstrap and utility scripts |
+
+### `.config/nvim/` — Neovim (LazyVim)
+
+LazyVim distribution — installed locally but not tracked in the dotfiles repo.
+
+### `.backup/` — Shell Configs
+
+Shell configs kept here instead of the home directory root:
+
+| File | Description |
+|------|-------------|
+| `.backup/.bashrc` | Bash config — sources `~/.profile` |
+| `.backup/.profile` | Common aliases, NVM, cargo, kasa, ssh tunnel |
+| `.backup/.zshrc` | Zsh config — sources profile, loads NVM and bun |
+
 ### `.pi/` — Pi Coding Agent Configuration
 
 The Pi coding agent is set up for local LLM + GitHub Copilot integration.
@@ -58,22 +81,6 @@ The Pi coding agent is set up for local LLM + GitHub Copilot integration.
 | `.pi/agent/settings.json` | Pi agent settings: default model (`qwen3.6-35b-mtp`), enabled models, theme, compaction, thinking levels, and package list |
 | `.pi/agent/local-models.json` | Per-model overrides for local LLMs (Ollama/vLLM): URL, context windows, reasoning flags, and sampling params for `qwen3.8-27b` and `qwen3.6-35b-mtp` |
 | `.pi/agent/extensions/local-models.ts` | Pi extension that discovers and configures local models from `local-models.json`, merging per-model overrides with defaults |
-
-### `config/scripts/`
-
-| File | Description |
-|------|-------------|
-| `config/scripts/bootstrap-debian` | Bootstrap script for Debian systems |
-| `config/scripts/bootstrap-mac` | Bootstrap script for macOS systems |
-| `config/scripts/bootstrap-proxmox` | Bootstrap script for Proxmox VE |
-| `config/scripts/display-placer` | Multi-monitor display layout tool |
-| `config/scripts/setup-bare-fugitive` | Setup script for bare repository fugitive integration |
-
-### `scripts/`
-
-| File | Description |
-|------|-------------|
-| `scripts/pi-bootstrap.sh` | One-line bootstrap script that clones the bare dotfiles repo, creates the `git dotfiles` alias, and checks out configs |
 
 ### `.gitignore`
 
