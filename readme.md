@@ -10,7 +10,7 @@ For a clean home directory without a `dotfiles/` working tree, use a bare reposi
 
 ```bash
 # Clone as bare repo
-git clone --bare <repo-url> ~/.dotfiles
+git clone --bare git@github.com:drdrei/dotfiles.git ~/.dotfiles
 
 # Create git alias for managing dotfiles
 git config --global alias.dotfiles '!git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
@@ -29,7 +29,7 @@ Files will be checked out directly to `~`. Manage with `git dotfiles add`, `git 
 Automates the bare repo setup above:
 
 ```bash
-curl <repo-url>/raw/main/scripts/pi-bootstrap.sh | bash
+curl https://raw.githubusercontent.com/drdrei/dotfiles/main/scripts/pi-bootstrap.sh | bash
 ```
 
 ### Alternative: Standard Clone
@@ -37,7 +37,7 @@ curl <repo-url>/raw/main/scripts/pi-bootstrap.sh | bash
 If you prefer a standard clone:
 
 ```bash
-git clone <repo-url> ~/dotfiles
+git clone git@github.com:drdrei/dotfiles.git ~/dotfiles
 ```
 
 Then manage files from `~/dotfiles/` or selectively symlink configs.
