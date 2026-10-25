@@ -59,6 +59,16 @@ The Pi coding agent is set up for local LLM + GitHub Copilot integration.
 | `.pi/agent/local-models.json` | Per-model overrides for local LLMs (Ollama/vLLM): URL, context windows, reasoning flags, and sampling params for `qwen3.8-27b` and `qwen3.6-35b-mtp` |
 | `.pi/agent/extensions/local-models.ts` | Pi extension that discovers and configures local models from `local-models.json`, merging per-model overrides with defaults |
 
+### `config/scripts/`
+
+| File | Description |
+|------|-------------|
+| `config/scripts/bootstrap-debian` | Bootstrap script for Debian systems |
+| `config/scripts/bootstrap-mac` | Bootstrap script for macOS systems |
+| `config/scripts/bootstrap-proxmox` | Bootstrap script for Proxmox VE |
+| `config/scripts/display-placer` | Multi-monitor display layout tool |
+| `config/scripts/setup-bare-fugitive` | Setup script for bare repository fugitive integration |
+
 ### `scripts/`
 
 | File | Description |
