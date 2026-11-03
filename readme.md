@@ -32,6 +32,10 @@ Automates the bare repo setup above:
 curl https://raw.githubusercontent.com/drdrei/dotfiles/main/.config/scripts/pi-bootstrap.sh | bash
 ```
 
+For an Alpine LXC guest that hosts long `pi` runs, use the same one-liner, then
+install the tmux layout save cron line documented in `.config/tmux/tmux.conf`.
+The guest needs `apk add git curl bash`.
+
 ### Alternative: Standard Clone
 
 If you prefer a standard clone:
@@ -55,6 +59,7 @@ Then manage files from `~/dotfiles/` or selectively symlink configs.
 |------|-------------|
 | `config/iterm2/iterm2-profile.json` | iTerm2 profile (colors, font, keybindings) |
 | `config/tmux/tmux.conf` | Tmux config (prefix C-Space, plugins, pane layout) |
+| `config/shell/load.sh` | Host-agnostic shell functions (`pilocal`). Nothing sources it: add `. "$HOME/.config/shell/load.sh"` to your shell rc |
 | `config/zsh/git.sh` | Zsh helpers and git dotfiles aliases |
 | `config/scripts/` | Bootstrap and utility scripts |
 
